@@ -28,17 +28,6 @@ body {
     linear-gradient(180deg, #fcf8f3 0%, var(--bg-color) 100%);
 }
 
-body::before,
-body::after {
-  content: "";
-  position: fixed;
-  inset: auto;
-  border-radius: 999px;
-  filter: blur(10px);
-  opacity: 0.55;
-  pointer-events: none;
-}
-
 body::before {
   width: 220px;
   height: 220px;
