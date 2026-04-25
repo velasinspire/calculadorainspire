@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Velas Aromáticas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="calculator-card" aria-labelledby="page-title">
+        <div class="hero">
+          <span class="hero-badge">Candlemaker Edition</span>
+          <h1 id="page-title">Calculadora de velas aromáticas</h1>
+          <p class="hero-copy">
+            Descubra a quantidade exata de cera e essência para que cada vela
+            fique na proporção ideal e caiba perfeitamente no frasco.
+          </p>
+        </div>
+
+        <form id="calculator-form" class="calculator-form" novalidate>
+          <div class="input-grid">
+            <label class="input-group">
+              <span>Tamanho da vela (g)</span>
+              <input
+                id="candle-size"
+                name="candle-size"
+                type="number"
+                min="0"
+                step="0.01"
+                inputmode="decimal"
+                placeholder="Ex: 200"
+                required
+              />
+            </label>
+
+            <label class="input-group">
+              <span>Quantidade de velas</span>
+              <input
+                id="candle-quantity"
+                name="candle-quantity"
+                type="number"
+                min="0"
+                step="1"
+                inputmode="numeric"
+                placeholder="Ex: 10"
+                required
+              />
+            </label>
+
+            <label class="input-group">
+              <span>Porcentagem de essência (%)</span>
+              <input
+                id="fragrance-percent"
+                name="fragrance-percent"
+                type="number"
+                min="0"
+                step="0.01"
+                inputmode="decimal"
+                placeholder="Ex: 10"
+                required
+              />
+            </label>
+          </div>
+
+          <button type="submit" class="primary-button">Calcular</button>
+          <p id="form-message" class="form-message" aria-live="polite"></p>
+        </form>
+
+        <section
+          id="result-card"
+          class="result-card"
+          aria-live="polite"
+          aria-labelledby="result-title"
+        >
+          <div class="result-header">
+            <h2 id="result-title">Resultado</h2>
+            <span class="result-chip">2 casas decimais</span>
+          </div>
+
+          <div class="result-grid">
+            <article class="result-item">
+              <span class="result-label">Cera por vela</span>
+              <strong id="wax-per-candle">--</strong>
+            </article>
+
+            <article class="result-item">
+              <span class="result-label">Essência por vela</span>
+              <strong id="fragrance-per-candle">--</strong>
+            </article>
+
+            <article class="result-item">
+              <span class="result-label">Cera total</span>
+              <strong id="total-wax">--</strong>
+            </article>
+
+            <article class="result-item">
+              <span class="result-label">Essência total</span>
+              <strong id="total-fragrance">--</strong>
+            </article>
+
+            <article class="result-item result-item-highlight">
+              <span class="result-label">Total da produção</span>
+              <strong id="total-production">--</strong>
+            </article>
+          </div>
+
+          <p class="result-note">
+            A essência é calculada com base na cera, garantindo que a
+            porcentagem esteja correta e o volume final caiba perfeitamente no
+            frasco.
+          </p>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
